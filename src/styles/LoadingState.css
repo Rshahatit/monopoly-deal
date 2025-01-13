@@ -1,0 +1,24 @@
+.loading-state, .error-state {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.loading-state {
+  background-color: #f5f5f5;
+}
+
+.error-state {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.loading-state h2, .error-state h2 {
+  margin-bottom: 10px;
+}
+
+.loading-state p, .error-state p {
+  margin: 5px 0;
+  color: #666;
+}

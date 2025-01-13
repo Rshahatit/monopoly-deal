@@ -1,0 +1,14 @@
+.simple-card {
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.simple-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.simple-card.selected {
+  border: 2px solid #4a90e2 !important;
+  box-shadow: 0 0 8px rgba(74,144,226,0.5);
+}

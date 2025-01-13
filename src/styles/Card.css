@@ -1,0 +1,109 @@
+/* Card animations and styles */
+.card {
+  position: relative;
+  width: 200px;
+  height: 280px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  user-select: none;
+  margin: 10px;
+  padding: 15px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card.selected {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-value {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.card-type {
+  text-transform: capitalize;
+  color: #718096;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-content h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #2d3748;
+}
+
+.property-color {
+  width: 100%;
+  height: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.card-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(45deg, #e2e8f0, #cbd5e0);
+  border-radius: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #4a5568;
+}
+
+/* Card animation classes */
+.card-enter {
+  opacity: 0;
+  transform: scale(0.8) translateY(50px);
+}
+
+.card-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition: all 0.3s ease;
+}
+
+.card-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card-exit-active {
+  opacity: 0;
+  transform: scale(0.8) translateY(-50px);
+  transition: all 0.3s ease;
+}
+
+.card-flip {
+  transform: rotateY(180deg);
+  transition: transform 0.6s ease;
+}
+
+/* Game area layouts */
+.player-hand {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  min-height: 300px;
+}

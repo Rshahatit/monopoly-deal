@@ -1,0 +1,42 @@
+
+.player-section {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .current-player {
+    border-color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.05);
+  }
+  
+  .section-title {
+    margin: 0 0 1rem;
+    color: #333;
+  }
+  
+  .other-player-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .hand-section, .property-section, .bank-section {
+    padding: 0.5rem;
+    background: #f9f9f9;
+    border-radius: 0.25rem;
+  }
+  
+  h4 {
+    margin: 0 0 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+  }

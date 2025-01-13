@@ -1,0 +1,41 @@
+.game-controls {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.action-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.action-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.action-button.primary {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.action-button.primary:hover:not(:disabled) {
+  background-color: #357abd;
+}
+
+.action-button.secondary {
+  background-color: #ffffff;
+  border: 2px solid #4a90e2;
+  color: #4a90e2;
+}
+
+.action-button.secondary:hover:not(:disabled) {
+  background-color: #f0f7ff;
+}
