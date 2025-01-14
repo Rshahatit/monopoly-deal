@@ -1,23 +1,45 @@
-export type GameStatus = 'waiting' | 'ready' | 'active' | 'completed';
+export type PropertyColor = 
+  | 'brown'
+  | 'blue'
+  | 'green'
+  | 'yellow'
+  | 'red'
+  | 'orange'
+  | 'pink'
+  | 'lightBlue'
+  | 'railroad'
+  | 'utility';
 
-export interface Game {
+export type CardType = 
+  | 'property'
+  | 'money'
+  | 'action'
+  | 'rent'
+  | 'wildcard';
+
+export interface Card {
   id: string;
+  type: CardType;
   name: string;
-  status: GameStatus;
-  playerIds: string[];
-  deck: string[];
-  discardPile: string[];
-  currentPlayerId: string;
-  createdAt: string;
-  updatedAt: string;
+  value: number;
+  color?: PropertyColor;
+  imageUrl?: string;
 }
 
-export interface PlayerGameState {
+export interface Player {
   id: string;
-  gameId: string;
-  playerId: string;
-  hand: string[];
-  properties: string[];
-  bank: string[];
-  isCreator: boolean;
+  name: string;
+  hand: Card[];
+  properties: Card[][];
+  money: Card[];
+  bank: number;
+}
+
+export interface GameState {
+  players: Player[];
+  currentPlayer: number;
+  deck: Card[];
+  discardPile: Card[];
+  winner: string | null;
+  actionInProgress: string | null;
 }
