@@ -16,7 +16,7 @@ const schema = a.schema({
   Game: a
     .model({
       id: a.string().required(),
-      status: a.enum(["waiting", "active", "completed", "initializing"]),
+      status: a.enum(["waiting", "active", "completed"]),
       currentPlayerId: a.string(),
       playerIds: a.string().array().required(),
       createdAt: a.datetime().required(),
@@ -44,7 +44,7 @@ const schema = a.schema({
       id: a.string().required(),
       gameId: a.string().required(),
       playerId: a.string().required(),
-      type: a.enum(["draw", "play", "discard", "stack", "initial_deal"]),
+      type: a.enum(["draw", "play", "discard", "stack"]),
       cardIds: a.string().array().required(),
       timestamp: a.datetime().required(),
       targetPlayerId: a.string(),
